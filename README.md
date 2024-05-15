@@ -76,6 +76,9 @@ After starting the application, you can access the following endpoints:
 - `/login`: Custom login page.
 - `/register`: User registration page.
 
+  ## Important
+  - Project requires a SQL database. I was using PostgreSQL. You have to configure it manually on your localhost/cloud. Then simply add your own link to it in `application.yml` property called: ```datasource:url:{your link to database} ```
+
 ## License
 This project is licensed under the MIT License.
 
