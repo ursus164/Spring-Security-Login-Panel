@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.register_span {
+  font-size: 1.2rem;
+}
+
+.icon_container .fa-solid {
+  font-size: 4rem;
+}/*# sourceMappingURL=style.css.map */

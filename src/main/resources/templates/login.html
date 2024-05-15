@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/styles/css/style.css}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link  rel="stylesheet" th:href="@{/styles/css/bootstrap.min.css}" >
+
+    <title>Login Page</title>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="container d-flex justify-content-center icon_container">
+            <i class="fa-solid fa-microchip "> ICT</i>
+        </div>
+
+        <div class="col-12 d-flex justify-content-center mt-5">
+            <h1>Welcome!</h1>
+        </div>
+    </div>
+    <div th:if="${param.error}">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <p>Niepoprawna nazwa użytkownika lub hasło.</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+    <div th:if="${param.logout}">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <p>Wylogowano poprawnie!</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form
+                    method="post"
+                    role="form"
+                    th:action="@{/login}"
+                    th:object="${userDto}"
+            >
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input th:field="*{username}" type="text" class="form-control" id="username" name="username">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input th:field="*{password}" type="password" class="form-control" id="password" name="password">
+                </div>
+                <div class="container d-flex justify-content-between">
+                    <span>Register here: <a th:href="@{/register}">Register</a></span>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="your_personal_kit" crossorigin="anonymous"></script>
+</body>
+</html>

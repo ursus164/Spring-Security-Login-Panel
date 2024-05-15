@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: Login_Register_Application
+  datasource:
+    url: jdbc:postgresql://localhost:5432/LoginAndRegistrationDb
+    username: postgres
+    password: admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8080
+
