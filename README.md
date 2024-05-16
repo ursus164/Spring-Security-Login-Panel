@@ -72,7 +72,7 @@ The `UserController` class in the `com.ursus.controller` package handles web req
 
 ## Usage
 After starting the application, you can access the following endpoints:
-- `/home`: Accessible only after the user is authenticated, displays the home page.
+- `/home`: Accessible only after user authentication, displays the home page.
 - `/login`: Custom login page.
 - `/register`: User registration page.
 
